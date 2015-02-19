@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+dpkg-sig --sign builder oracle-java8/*.deb
+cd oracle-java8
+apt-ftparchive packages . > Packages
+gzip --to-stdout Packages > Packages.gz
+apt-ftparchive release . > Release
+gpg --clearsign --output InRelease Release
+gpg --armor --detach-sign --sign --output Release.gpg Release

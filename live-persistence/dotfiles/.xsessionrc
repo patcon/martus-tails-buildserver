@@ -1,0 +1,6 @@
+. /etc/amnesia/environment
+export TAILS_WIKI_SUPPORTED_LANGUAGES
+
+gsettings set org.gnome.desktop.background primary-color "#505050"
+gsettings set org.gnome.desktop.background picture-options "centered"
+gsettings set org.gnome.desktop.background picture-uri "file:///home/amnesia/.local/share/backgrounds/martus-logo-light.png"

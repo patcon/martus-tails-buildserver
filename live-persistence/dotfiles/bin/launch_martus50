@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+zenity --notification \
+  --timeout 1 \
+  --text "Please wait while Martus starts..."
+
+java -jar /home/amnesia/.local/share/java/MartusClient-5.0.2/martus.jar
