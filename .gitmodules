@@ -1,0 +1,3 @@
+[submodule "oracle-java8"]
+	path = oracle-java8
+	url = git://github.com/rraptorr/oracle-java8.git
