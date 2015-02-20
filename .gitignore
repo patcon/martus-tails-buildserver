@@ -5,3 +5,4 @@ live-persistence/apt/lists/partial/*
 live-persistence/dotfiles/.local/deb/oracle-java8/*
 lock
 *.key
+/*.tar.gz
