@@ -2,7 +2,7 @@ live-persistence/dotfiles/.local/share/java/*
 live-persistence/apt/cache/*.deb
 live-persistence/apt/trusted.gpg.d/*.gpg*
 live-persistence/apt/lists/partial/*
-live-persistence/dotfiles/.local/deb/oracle-java8/*
+live-persistence/apt/deb-repo/oracle-java8/*
 lock
 *.key
 /*.tar.gz
