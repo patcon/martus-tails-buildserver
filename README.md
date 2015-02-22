@@ -11,25 +11,19 @@
 ```
 git clone https://github.com/patcon/martus-tails-buildserver
 cd martus-tails-buildserver
-git submodule update --init --recursive
 
-cd oracle-java8
-if [ git apply ../increase-java8-package-priority.diff --check ]
-	# Increase priority of java package in `debian/rules`
-	git apply ../increase-java8-package-priority.diff
-fi
-sudo apt-get install debhelper curl unzip proxychains --yes
-proxychains ./prepare.sh
-sudo apt-get install build-essential lsb-release libasound2 unixodbc libxi6 libxt6 libxtst6 libxrender1 --yes
-dpkg-buildpackage -uc -us
+# For preparing the oracle-java8 build environment
+sudo apt-get install debhelper curl unzip proxychains
 
-cd ..
-dpkg-sig --sign builder *.deb
-apt-ftparchive packages . > Packages
-gzip --to-stdout Packages > Packages.gz
-apt-ftparchive release . > Release
-gpg --clearsign --output InRelease Release
-gpg --armor --detach-sign --sign --output Release.gpg Release
+# For running build scripts through Tor
+sudo apt-get install proxychains
+
+# For building oracle-java8 packages
+sudo apt-get install build-essential lsb-release libasound2 unixodbc libxi6 libxt6 libxtst6 libxrender1
+
+bash build-java8.sh
+
+bash sign-packages.sh
 
 STAGING_DIR=$GIT_REPO_DIR/live-persistence
 
