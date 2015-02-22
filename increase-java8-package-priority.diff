@@ -1,0 +1,13 @@
+diff --git a/debian/rules b/debian/rules
+index 542f570..d423ae1 100755
+--- a/debian/rules
++++ b/debian/rules
+@@ -37,7 +37,7 @@ jdkbuild	:= 13
+ jdirname	:= java-$(version)-$(VENDOR)-$(jdkversion).$(releng_ver)
+ jdiralias	:= java-$(version)-$(VENDOR)
+ srcdir		:= $(arch)
+-priority	:= 83
++priority	:= 9999
+ 
+ basedir		:= $(TOP)/$(jdirname)
+ security	:= etc/$(jdiralias)/security

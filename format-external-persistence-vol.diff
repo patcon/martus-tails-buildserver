@@ -1,0 +1,18 @@
+--- /etc/polkit-1/localauthority/10-vendor.d/org.boum.tails.pkla	2015-02-21 20:28:56.263997747 +0000
++++ /etc/polkit-1/localauthority/10-vendor.d/org.boum.tails.pkla	2015-02-21 20:30:09.391994187 +0000
+@@ -1,11 +1,11 @@
+-[Modify internal storage devices]
++[Modify any storage devices]
+ Identity=unix-user:tails-persistence-setup
+-Action=org.freedesktop.udisks.change-system-internal
++Action=org.freedesktop.udisks.change
+ ResultAny=yes
+ 
+-[Mount internal storage devices]
++[Mount any storage devices]
+ Identity=unix-user:tails-persistence-setup
+-Action=org.freedesktop.udisks.filesystem-mount-system-internal
++Action=org.freedesktop.udisks.filesystem-mount
+ ResultAny=yes
+ 
+ [Unlock encrypted storage devices]

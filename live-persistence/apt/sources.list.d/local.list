@@ -1,1 +1,1 @@
-deb file:/home/amnesia/.local/deb/oracle-java8/ /
+deb file:/usr/local/deb/oracle-java8/ /
