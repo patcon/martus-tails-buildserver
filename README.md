@@ -25,19 +25,9 @@ bash build-java8.sh
 
 bash sign-packages.sh
 
-STAGING_DIR=$GIT_REPO_DIR/live-persistence
+STAGING_DIR=$GIT_ROOT/live-persistence
 
-# Download and unzip martus jar
-
-# Add local.list (system)
-
-# Make deb repo (staging and system)
-sudo cp *.deb Packages* Release* InRelease $STAGING_DIR/apt/deb-repo/oracle-java8
-
-# Generate trusted keyring (staging and system)
-gpg --armor --export <fingerprint> > $STAGING_DIR/apt/trusted.gpg.d/_local-repo-test.gpg
-
-# Copy everything needed to system locations
+# Copy these to system: local.list, deb-repo, trusted keyring
 
 # Run `apt-get update` (system)
 
@@ -46,6 +36,7 @@ gpg --armor --export <fingerprint> > $STAGING_DIR/apt/trusted.gpg.d/_local-repo-
 # Copy apt-caches (specific debs) to staging
 apt-get --option Dir::Cache::Archives=$STAGING_DIR/apt/cache --download-only install oracle-java8-jre
 
+bash download-install-martus.sh
 ```
 
 ### Generating child USBs
