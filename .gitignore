@@ -4,7 +4,6 @@ live-persistence/apt/trusted.gpg.d/*.gpg*
 live-persistence/apt/lists/partial/*
 live-persistence/apt/deb-repo/oracle-java8/*
 lock
-*.key
 /*.tar.gz
 /*.deb
 /*.dsc
