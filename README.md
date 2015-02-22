@@ -19,7 +19,7 @@ sudo apt-get install debhelper curl unzip proxychains
 sudo apt-get install proxychains
 
 # For building oracle-java8 packages
-sudo apt-get install build-essential lsb-release libasound2 unixodbc libxi6 libxt6 libxtst6 libxrender1
+sudo apt-get install fakeroot build-essential lsb-release libasound2 unixodbc libxi6 libxt6 libxtst6 libxrender1
 
 bash build-java8.sh
 
@@ -36,6 +36,8 @@ sudo cp *.deb Packages* Release* InRelease $STAGING_DIR/apt/deb-repo/oracle-java
 
 # Generate trusted keyring (staging and system)
 gpg --armor --export <fingerprint> > $STAGING_DIR/apt/trusted.gpg.d/_local-repo-test.gpg
+
+# Copy everything needed to system locations
 
 # Run `apt-get update` (system)
 
