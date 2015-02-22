@@ -6,3 +6,6 @@ live-persistence/dotfiles/.local/deb/oracle-java8/*
 lock
 *.key
 /*.tar.gz
+/*.deb
+/*.dsc
+/*.changes
