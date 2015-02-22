@@ -4,7 +4,7 @@
 Version=1.0
 Type=Application
 Terminal=false
-Exec=/home/amnesia/.local/bin/launch_martus50
+Exec=/home/amnesia/bin/launch_martus50
 Name=Martus Desktop 5.0
 Comment=Martus Client 5.0.2
 Icon=/home/amnesia/.local/share/icons/martus.png
