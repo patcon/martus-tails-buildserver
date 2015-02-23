@@ -28,6 +28,8 @@ bash sign-packages.sh
 STAGING_DIR=$GIT_ROOT/live-persistence
 
 # Copy these to system: local.list, deb-repo, trusted keyring
+sudo cp -r live-persistence/apt/deb-repo/* /usr/local/deb
+
 
 # Run `apt-get update` (system)
 
