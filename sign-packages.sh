@@ -27,5 +27,5 @@ gpg --default-key="$GPG_KEYID" --batch --yes --armor --detach-sign --sign --outp
 echo "ok."
 
 echo -n "Generating trusted keyring... "
-gpg --armor --export "$GPG_KEYID" > $GIT_ROOT/live-persistence/apt/trusted.gpg.d/_local-repo.gpg
+gpg --export "$GPG_KEYID" > $GIT_ROOT/live-persistence/apt/trusted.gpg.d/_local-repo.gpg
 echo "ok."
