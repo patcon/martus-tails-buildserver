@@ -12,6 +12,12 @@ privacy and anonymity. [Website.](https://tails.boum.org/)
 Tails buildserver for generating "child" Tails USBs that are
 pre-configured to run the Martus software on first boot.
 
+## Why?
+
+Martus would benefit from a secure environment, but requires Java 8.
+Neither Martus nor Java 8 have much hope of being deployed with stock
+Tails in the near future, and so we need another solution.
+
 ## Goals
 
 * Buildserver should be a Tails environment.
