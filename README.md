@@ -18,6 +18,8 @@ Martus would benefit from a secure environment, but requires Java 8.
 Neither Martus nor Java 8 have much hope of being deployed with stock
 Tails in the near future, and so we need another solution.
 
+See full discussion in [`docs/brainstorming.md`](docs/brainstorming.md).
+
 ## Goals
 
 * Buildserver should be a Tails environment.
