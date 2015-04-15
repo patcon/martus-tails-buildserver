@@ -1,5 +1,8 @@
 # Martus Desktop on Tails OS
 
+This is an early brainstorming document, and may not reflect the reality
+of the project. (README is more authoritative.)
+
 ## Two approaches
 
 - **CB.** Custom Tails build
@@ -19,9 +22,10 @@
 
 - **PV** involves creating a Tails USB via the regular process, then booting it in order to create a master Tails USB with persistence. That master is then booted, and its persistent vol configured to boot via dotfiles. These contents are available as a tarball, prepared once per Martus update, checksummed and optionally signed. Now that working USB with persistence is done, admin can copy the whole USB (Tails + persistence volume) many times on a build system with `dd`. Password on distributed USB's will be the same default one.
 
-- Persistence:            manual config vs pre-configured
-- Password on first boot: none          vs preset
-- Password uniqueness:    yes           vs yes if changed
+| Persistence:           | manual config | pre-configured |
+|------------------------|---------------|----------------|
+| Password on first boot | none | preset |
+| Password uniqueness    | yes | yes, if changed |
 
 #### Phase 2: Usage
 
