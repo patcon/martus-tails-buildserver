@@ -21,18 +21,18 @@ Tails in the near future, and so we need another solution.
 ## Goals
 
 * Buildserver should be a Tails environment.
-* While persistence on the Tails buildserver can be enabled to persist
-  its Apt package signing key, it should be relatively easy to run the
-  buildserver, and generate child Tails USBs with persistence disabled.
-* The Buildserver should only need this repo and GPG key to sign
+* While persistence on the Tails buildserver can be enabled for convenience (to persist
+  its Apt package signing key), it should be **easy to run the
+  buildserver with persistence disabled**, and generate child Tails USBs.
+* The Buildserver should only need 1) this repo, and 2) a GPG key to sign
   generated packages.
 * Child Tails USBs should be able to be created from the master Tails
-  buildserver without needing to boot up the child USBs.
-* The child USBs should run stock Tails (not custom images) and be able
+  buildserver **without needing to boot up the child USBs**.
+* The child USBs should run **stock Tails** (not custom images) and be able
   to leverage the official Tails update mechanisms.
-* Any configuration for running Martus should be done via the official
-  Tails persistence volume mechanism and features.
-* Software running on child USB should be available on first-boot with
+* Any configuration for running Martus should be done via the **official
+  Tails persistence volume mechanism** and features.
+* Software running on child USB should be **available on first-boot** with
   zero or minimal effort.
 * Child USBs are necessarily generated with a default password on their
   persistence volume (ideally randomized), but with instructions for the
